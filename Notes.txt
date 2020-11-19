@@ -66,3 +66,10 @@ localhost:5000/api/getID?id=1
 Update works pretty much the same as the the getting by index the only difference is that you will be changing the objects value the way you would normmally in python
 
 say we obtain it by id and we want to be able to change the author name we get the object in the same way and then change it by setting it to a new value
+
+
+==DELETE BY INDEX==
+
+This works the same as Update only difference is your deleteing
+
+

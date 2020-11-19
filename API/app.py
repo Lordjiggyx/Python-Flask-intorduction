@@ -89,5 +89,28 @@ def update_by_id():
     
     #return the results using jsonify
     return "Book has been updated"
+
+@app.route("/api/removeid")
+def remove_by_id():
+    #Check to see if an ID was part if the URL
+    if "id"  in request.args:
+        #creates a local variable reefering to whatever was passed into the id
+        id = int(request.args['id'])
+        
+    else:
+        return "ERROR please specify an id"
+
+    #creating an empty list
+    result = []
+
+    #loop through data and match result that fit the requested id
+    for book in books:
+        if book['id']==id:
+            #Author details change must  be single quotes
+            books.remove(book)
+
+    
+    #return the results using jsonify
+    return "Book has been removed"    
     
 app.run(debug=True)
