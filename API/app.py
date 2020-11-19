@@ -110,7 +110,32 @@ def remove_by_id():
             books.remove(book)
 
     
-    #return the results using jsonify
+    #return message
     return "Book has been removed"    
+
+
+@app.route("/api/create")
+def createBook():
+    #Check to see if an ID was part if the URL
+    if "id" and "author" and "title" in request.args:
+        #creates a local variable reefering to whatever was passed into the id
+        id = int(request.args['id'])
+        author = (request.args['author'])
+        title = (request.args['title'])
+    else:
+        return "ERROR please include an id author and title"
+
+    #creating book object
+    book ={
+        "id":id,
+        "author":author,
+        "title":title
+    }
+
+    books.append(book)
+
+    
+  #return message
+    return "Book has been added"    
     
 app.run(debug=True)

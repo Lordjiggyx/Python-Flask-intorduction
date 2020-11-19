@@ -72,4 +72,8 @@ say we obtain it by id and we want to be able to change the author name we get t
 
 This works the same as Update only difference is your deleteing
 
+==Creating an object==
 
+To create an object in this scenario makes use of query parameters as well 
+
+All you need to do is to create an object and ensure that the varibles are there and append it 
