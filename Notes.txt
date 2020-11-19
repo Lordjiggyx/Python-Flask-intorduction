@@ -1,0 +1,34 @@
+====== Setup ======
+
+To start using flask the first thing you must actually do is to install it we will do this using pip by running the following command in the terminal
+
+pip install flask
+
+====== Starting a flask application ======
+
+To start in whatever file you plan to run the application in you must import flask
+
+Then you must declare an instance of flask passing in the __name__  keyword
+
+
+Now for every method you declare in your application it must preceed with an annotattion indictaing the route of the method
+
+@app.route() method passing in a string for the route 
+
+you can then call the app.run() method to run the application
+
+**When you dun a python application it is worthy to note that you can pass in the debug value this allows you to see if there is any errors regarding the application **
+
+You can run the application using command line ot just running it in vscode like usual
+
+once the file has been saved and you run it you can go to localhost:5000 and then you will see the message corresponfing to the home route
+
+====== What flask does ======
+
+Flask maps http requests to functions, this process is known as routing, this is almost like what you did in relation to node and express 
+
+
+====== Creating an API ======
+To create this API we need data 
+
+we plan to add data to ou API using dictionaries, these dictionaries act as Json objects would using key pair values 
