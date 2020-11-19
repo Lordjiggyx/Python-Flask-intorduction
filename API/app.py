@@ -64,5 +64,30 @@ def get_by_id():
 
     #return the results using jsonify
     return jsonify(result)
+
+@app.route("/api/updateid")
+def update_by_id():
+    #Check to see if an ID or author was part if the URL
+    if "id" and "author" in request.args:
+        #creates a local variable reefering to whatever was passed into the id
+        id = int(request.args['id'])
+        #Author is also obtained
+        author = (request.args['author'])
+    else:
+        return "ERROR please specify an id"
+
+    #creating an empty list
+    result = []
+
+    print(author)
+    #loop through data and match result that fit the requested id
+    for book in books:
+        if book['id']==id:
+            #Author details change must  be single quotes
+            book['author'] = author
+
+    
+    #return the results using jsonify
+    return "Book has been updated"
     
 app.run(debug=True)

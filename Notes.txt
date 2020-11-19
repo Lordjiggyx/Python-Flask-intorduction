@@ -59,3 +59,10 @@ and then from there yu can loop through your data and get the object with the ma
 to add parameters to a url that will be used in python you must use a ? before the name and then equal it to a value
 
 localhost:5000/api/getID?id=1
+
+
+==UPDATE BY INDEX==
+
+Update works pretty much the same as the the getting by index the only difference is that you will be changing the objects value the way you would normmally in python
+
+say we obtain it by id and we want to be able to change the author name we get the object in the same way and then change it by setting it to a new value
