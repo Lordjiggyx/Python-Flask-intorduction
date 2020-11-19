@@ -81,3 +81,6 @@ URL's
 * **localhost:5000/api/updateid?id='value'&author='value'** - Gets a book by id and updates the author name 
 * **localhost:5000/api/removeid?id='value'** - Removes a book by id 
 * **localhost:5000/api/create?id='value'&author='value'&title='value'** - Creates a new book with an id author name and title
+
+
+Pass any of thse into the search engine you use or curl it from the command line
