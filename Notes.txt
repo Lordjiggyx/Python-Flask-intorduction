@@ -32,3 +32,30 @@ Flask maps http requests to functions, this process is known as routing, this is
 To create this API we need data 
 
 we plan to add data to ou API using dictionaries, these dictionaries act as Json objects would using key pair values 
+
+
+In this example we have 3 objects with the following keys , id , title , author , first_sentence and the year it was published
+
+==GET ALL==
+
+A method called get_all is created as you can see the route is definede to "/api/Books" and in this method we use jsoonify to send the dictionary as a json object
+
+jsoonify must be imported as it is a flask function
+
+==GETTING BY INDEX==
+
+To get an item by index  we can pass its identifying information as part of a url parameter and then create a local variable to represent the value 
+
+To access url parameters we use the request object, this object must be imported from flask as well as jsonify, 
+
+you must then use the request.args to identify the parameter
+
+if the parameter is in the request then set it to a local variable in the method 
+
+then you can create an empty list 
+
+and then from there yu can loop through your data and get the object with the matching index and append it to this empty list and then return it
+
+to add parameters to a url that will be used in python you must use a ? before the name and then equal it to a value
+
+localhost:5000/api/getID?id=1
